@@ -128,6 +128,10 @@ class PrevNextPage
             return false;
         }
 
+        if(!$dataProvider->pagination){
+            return false;
+        }
+
         $page = $dataProvider->pagination->getPage();
         if ($directionPrev && $page === 0) {
             return false;
